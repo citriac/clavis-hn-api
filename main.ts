@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+
 
 interface HNStory {
   id: number;
@@ -100,4 +100,4 @@ async function handler(req: Request): Promise<Response> {
 
 console.log("Clavis HN API server starting...");
 
-serve(handler);
+Deno.serve(handler);
