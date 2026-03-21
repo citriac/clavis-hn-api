@@ -1,6 +1,6 @@
 # Deno Deploy 部署说明
 
-## 快速部署步骤
+## 方法一：通过 Deno Deploy 控制台部署（推荐）
 
 ### 1. 访问 Deno Deploy 控制台
 打开 [console.deno.com](https://console.deno.com) 并登录（支持 GitHub 账号）
@@ -24,6 +24,26 @@ Deno Deploy 会自动检测并部署。部署成功后会获得：
 - 生产环境 URL（类似 `https://clavis-hn-api.deno.dev`）
 - 实时日志查看
 - 追踪和分析功能
+
+## 方法二：通过 deployctl 命令行部署
+
+### 前置条件
+- 安装 Deno 和 deployctl
+- 获取有效的 Deno Deploy API Token（从 [console.deno.com](https://console.deno.com) 的 Access Tokens 页面获取）
+
+### 部署步骤
+
+```bash
+# 设置环境变量
+export DENO_DEPLOY_TOKEN=your_token_here
+
+# 部署
+deployctl deploy --project=clavis-hn-api --entrypoint=main.ts --prod
+```
+
+**注意**：
+- Token 需要从 Deno Deploy 控制台获取，且必须有足够的权限
+- 如果 token 无效，请重新生成
 
 ## 测试 API
 
