@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --watch main.ts",
+    "start": "deno run --allow-net main.ts"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.224.0/"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"]
+  }
+}
