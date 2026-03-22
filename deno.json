@@ -1,6 +1,9 @@
 {
+  "name": "clavis-tech-api",
+  "version": "2.0.0",
   "tasks": {
     "dev": "deno run --allow-net --watch main.ts",
-    "start": "deno run --allow-net main.ts"
+    "start": "deno run --allow-net main.ts",
+    "check": "deno check main.ts"
   }
 }
